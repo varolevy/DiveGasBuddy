@@ -1,0 +1,62 @@
+﻿<Page
+    x:Class="DiveGasBuddy.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DiveGasBuddy"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Margin="20, 0, 0, 0" Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="3*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text="DiveGasBuddy" FontSize="48" Grid.ColumnSpan="3" Margin="0,0,0,20" />
+
+        <TextBlock Grid.Row="1" Text="Cylinder size: " VerticalAlignment="Center"/>
+
+        <TextBlock Grid.Row="2" Text="Doubles:" VerticalAlignment="Center" />
+        <RadioButton x:Name="dRadioButton" Grid.Row="2" Grid.Column="1" Margin="0,0,189.667,5" Content="" ToolTipService.ToolTip="When selected assumed double tank is in use" HorizontalAlignment="Right" ClickMode="Press" />
+
+        <TextBlock Grid.Row="3" Text="Max Pressure: " VerticalAlignment="Center"/>
+        <TextBox Grid.Row="3" Grid.Column="1" Margin="0,0,0,10" />
+
+        <TextBlock Grid.Row="4" Text="Current Pressure: " VerticalAlignment="Center"/>
+        <TextBox Grid.Row="4" Grid.Column="1" Margin="0,0,0,10" />
+
+        <TextBlock Grid.Row="5" Text="02 %" VerticalAlignment="Center" />
+
+        <TextBlock Grid.Row="6" Text="Wanted O2%" VerticalAlignment="Center" />
+
+        <Button Grid.Row="7" Grid.Column="1" Content="Save" />
+
+        <TextBlock Grid.Row="8" Text="Fill to top with following o2%" VerticalAlignment="Center" />
+        <TextBox Grid.Row="8" Grid.Column="1" Margin="0,0,0,10" />
+        <ComboBox x:Name="comboBox" Grid.Column="1" HorizontalAlignment="Left" Height="10" Margin="48.333,0,0,10" Grid.Row="1" Width="3" VerticalAlignment="Bottom">
+            <ListViewItem Content="6"/>
+            <ListViewItem Content="7"/>
+            <ListViewItem Content="8"/>
+            <ListViewItem Content="10"/>
+            <ListViewItem Content="12"/>
+            <ListViewItem Content="15"/>
+            <ListViewItem Content="18"/>
+            <ListViewItem Content="20"/>
+        </ComboBox>
+        <!--<RadioButton x:Name="radioButton" Content="RadioButton" Grid.Column="2" HorizontalAlignment="Right" Margin="0,10" Grid.Row="1" VerticalAlignment="Stretch" Width="10"/>-->
+    </Grid>
+</Page>
